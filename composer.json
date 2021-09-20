@@ -1,0 +1,25 @@
+{
+    "name": "notion-commotion/attribute-validator-command",
+    "description": "Creates Symfony command to find attributes which do not have classes assigned.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Michael Reed",
+            "email": "villascape@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=8",
+        "symfony/console": "5.3.*",
+        "nette/utils": "4",
+        "notion-commotion/attribute-validator": "^1"
+    },
+    "autoload": {
+        "psr-4": {
+            "NotionCommotion\\AttributeValidatorCommand\\": "src/"
+        }
+    },
+    "minimum-stability": "stable",
+    "require": {}
+}
