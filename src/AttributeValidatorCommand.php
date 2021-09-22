@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace NotionCommotion\AttributeValidator;
+namespace NotionCommotion\AttributeValidatorCommand;
 
 use Nette\Utils\Strings;
 use Nette\Utils\Json;
