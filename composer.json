@@ -3,6 +3,9 @@
     "description": "Creates Symfony command to find attributes which do not have classes assigned.",
     "type": "library",
     "license": "MIT",
+    "bin": [
+        "bin/attribute-validator"
+    ],
     "authors": [
         {
             "name": "Michael Reed",

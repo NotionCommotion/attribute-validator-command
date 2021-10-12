@@ -18,7 +18,7 @@ use Symfony\Component\Console\Question\Question;
 use NotionCommotion\AttributeValidator\AttributeValidator;
 use NotionCommotion\AttributeValidator\AttributeValidatorException;
 
-class AttributeValidatorCommand extends Command
+class AttributeValidator extends Command
 {
     private const COMMANDS = ['validate', 'getClassesWithUndeclaredAttributes', 'getClassesWithoutUndeclaredAttributes', 'getSuspectClasses', 'getNotFoundClasses', 'getTraits', 'getInterfaces', 'getAbstracts', 'jsonSerialize', 'debugSuspectFiles', 'debugFile'];
     // the name of the command (the part after "bin/console")
