@@ -8,14 +8,4 @@ composer require notion-commotion/attribute-validator-command
 
 ## Usage
 
-Add a Symfony command (I am sure there is a more proper way of doing this but don't yet know what it is.)
-
-    <?php
-    declare(strict_types=1);
-    namespace App\Command;
-    use NotionCommotion\AttributeValidator\AttributeValidator;
-    class AttributeValidator extends AttributeValidatorCommand{}
-
-Execute from the command line:
-
-    $ bin/console app:attribute-validator
+    $ vendor/bin/attribute-validator

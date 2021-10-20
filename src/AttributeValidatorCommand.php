@@ -18,22 +18,24 @@ use Symfony\Component\Console\Question\Question;
 use NotionCommotion\AttributeValidator\AttributeValidator;
 use NotionCommotion\AttributeValidator\AttributeValidatorException;
 
-class AttributeValidator extends Command
+class AttributeValidatorCommand extends Command
 {
     private const COMMANDS = ['validate', 'getClassesWithUndeclaredAttributes', 'getClassesWithoutUndeclaredAttributes', 'getSuspectClasses', 'getNotFoundClasses', 'getTraits', 'getInterfaces', 'getAbstracts', 'jsonSerialize', 'debugSuspectFiles', 'debugFile'];
-    // the name of the command (the part after "bin/console")
-    /**
-     * @var string
-     */
-    protected static $defaultName = 'app:attribute-validator';
+    protected static $defaultName = 'attribute:validate';
+    protected static $defaultDescription = 'Find PHP attributes without defined classes';
 
     protected function configure(): void
     {
         $this
         ->setDescription('Attribute Validator.  --help')
-        ->setHelp('This command allows you to check for PHP8 attributes without classes')
         ->addArgument('path', InputArgument::OPTIONAL, 'Path to check', 'src')
         ->addOption('command', null, InputOption::VALUE_REQUIRED, 'What command to run?', 'validate')
+        ->setHelp(<<<EOF
+The <info>%command.name%</info> command lints a YAML file and outputs to STDOUT
+This command allows you to check for PHP8 attributes without classesthe first encountered syntax error.
+This command allows you to check for PHP8 attributes without classes
+EOF
+        )
         ;
     }
 
@@ -81,7 +83,7 @@ class AttributeValidator extends Command
         /*
         $question = new ConfirmationQuestion('Continue with this action?', true);
         if (!$helper->ask($input, $output, $question)) {
-            return Command::SUCCESS;
+        return Command::SUCCESS;
         }
         */
 
