@@ -14,8 +14,8 @@
     ],
     "require": {
         "php": ">=8",
-        "symfony/console": "^5.3",
-        "nette/utils": "^3.2",
+        "symfony/console": ">=5.3",
+        "nette/utils": ">=3.2",
         "notion-commotion/attribute-validator": "^1.0"
     },
     "autoload": {
